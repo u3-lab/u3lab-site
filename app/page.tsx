@@ -1,11 +1,3 @@
-import Link from 'next/link';
-
-const SERVICES = [
-  { slug: 'photo',    title: '写真',       catch: '見方が変わると、写真が変わる。' },
-  { slug: 'soudan',   title: '相談',       catch: 'まずは話してみることから。' },
-  { slug: 'coaching', title: 'コーチング', catch: 'ふんわりしたやりたいを、最初の一歩に。' },
-];
-
 export default function Home() {
   return (
     <>
@@ -16,40 +8,10 @@ export default function Home() {
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-medium tracking-tight text-stone-900 leading-tight">
             自分の人生を、<br />自分でデザインする。
           </h1>
+          {/* TODO: サブコピー（伴走イメージ・光確定待ち） */}
           <p className="mt-6 text-base sm:text-lg text-stone-600 max-w-lg">
-            U3LABは、あなたの最初の一歩を一緒に設計する場所です。
+            ひとりで、歩かなくていい。
           </p>
-        </div>
-      </section>
-
-      {/* U3LABとは */}
-      <section className="py-24 px-6">
-        <div className="max-w-2xl mx-auto text-center">
-          <p className="text-base text-stone-600 leading-loose">
-            U3LABは、原田祐紀が主宰する事業体です。<br />
-            写真・個別相談・コーチングを通じて、<br />
-            「自分の人生を自分でデザインする」人を伴走しています。
-          </p>
-        </div>
-      </section>
-
-      {/* 3事業カード */}
-      <section className="py-16 px-6 bg-stone-50">
-        <div className="max-w-5xl mx-auto">
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-            {SERVICES.map((s) => (
-              <Link
-                key={s.slug}
-                href={`/services/${s.slug}`}
-                className="group block bg-white p-8 hover:shadow-sm transition-shadow"
-              >
-                {/* TODO: 事業サムネイル写真 */}
-                <div className="h-40 bg-stone-100 mb-6" />
-                <h2 className="text-base font-medium text-stone-900 mb-2">{s.title}</h2>
-                <p className="text-sm text-stone-500 leading-relaxed">{s.catch}</p>
-              </Link>
-            ))}
-          </div>
         </div>
       </section>
 
