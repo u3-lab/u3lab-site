@@ -8,7 +8,7 @@ export default function Home() {
           src="/hero.png"
           alt="U3LAB チームビジュアル"
           fill
-          className="object-cover object-center"
+          className="object-cover object-right"
           priority
         />
         {/* 左側グラデーション：テキストエリアの可読性確保 */}
