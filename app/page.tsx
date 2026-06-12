@@ -68,7 +68,7 @@ export default function Home() {
       <section className="w-full py-20 px-6 bg-white">
         <div className="max-w-2xl mx-auto space-y-8 text-stone-700">
           <p className="text-2xl font-medium text-stone-900 leading-relaxed">
-            「誰もが、自分らしく幸せに生きるために」
+            誰もが、自分らしく幸せに生きるために
           </p>
           <p className="text-base leading-loose">
             誰もが、幸せに生きる権利を持っています。
