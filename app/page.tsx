@@ -3,15 +3,14 @@ import Image from 'next/image';
 export default function Home() {
   return (
     <>
-      <section className="relative min-h-screen flex items-end pb-24 pt-16">
+      <section className="relative w-full aspect-video min-h-[300px] flex items-end pb-[5%] pt-16">
         <Image
           src="/hero.png"
           alt="U3LAB チームビジュアル"
           fill
-          className="object-cover object-left"
+          className="object-cover object-center"
           priority
         />
-        {/* 左側グラデーション：テキストエリアの可読性確保 */}
         <div className="absolute inset-0 bg-gradient-to-r from-black/65 via-black/30 to-transparent" />
         <div className="relative w-full px-6 sm:px-12 md:px-16">
           <div className="max-w-lg">
