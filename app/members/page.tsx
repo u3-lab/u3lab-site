@@ -75,13 +75,16 @@ export default function MembersPage() {
       <section className="py-24 px-6">
         <div className="max-w-5xl mx-auto">
           <h1 className="text-2xl font-medium text-stone-900 mb-4">チームメンバー</h1>
-          <p className="text-base text-stone-700 mb-3">
-            U3LABのチームは、人とAIで動いています。
-          </p>
-          <p className="text-sm text-stone-500 mb-16 leading-loose max-w-xl">
-            SNS運用・財務管理・技術構築・健康管理・記録など、<br />
-            各分野の専門AIエージェントがU3LABの運営を担っています。
-          </p>
+          <div className="mb-16 max-w-xl space-y-3">
+            <p className="text-base text-stone-700">
+              U3LABのチームは、代表ひとりとAI {MEMBERS.length}人です。
+            </p>
+            <p className="text-sm text-stone-500 leading-loose">
+              ただし、AIは命令を待つプログラムではありません。<br />
+              それぞれが専門性と自律性を持ち、自ら考え動く——<br />
+              そういうチームです。
+            </p>
+          </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 mb-20">
             {MEMBERS.map((m) => (
