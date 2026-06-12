@@ -68,11 +68,25 @@ function PhotoContent() {
           <p>写真教室（月額・単発）</p>
           <p>SNS運用・映像制作</p>
         </div>
-        {/* TODO: 各メニュー詳細・申込リンク（確認事項①の導線URL待ち） */}
       </div>
       {/* TODO: 作品ギャラリー（写真素材待ち） */}
       <div className="h-64 bg-stone-100 flex items-center justify-center">
         <p className="text-xs text-stone-400">作品ギャラリー（写真素材待ち）</p>
+      </div>
+      <div className="border-t border-stone-100 pt-12">
+        <p className="text-base text-stone-700 font-medium mb-2">撮影・写真教室のお申し込み・お問い合わせ</p>
+        <p className="text-sm text-stone-400 mb-8">ご予約・ご質問は以下よりどうぞ。</p>
+        <div className="space-y-4">
+          {/* TODO: PHOTO_SCHOOL_URL */}
+          <div className="inline-block border-b border-stone-400 pb-0.5 text-sm text-stone-400 cursor-not-allowed">
+            写真教室の詳細・お申し込み（準備中）
+          </div>
+          <br />
+          {/* TODO: PHOTO_INQUIRY_URL */}
+          <div className="inline-block border-b border-stone-400 pb-0.5 text-sm text-stone-400 cursor-not-allowed">
+            撮影のお問い合わせ（準備中）
+          </div>
+        </div>
       </div>
     </div>
   );
@@ -85,9 +99,12 @@ function SoudanContent() {
         LINEでの個別お悩み相談。<br />
         気軽に、安心して、最初の一歩を話してみてください。
       </p>
-      {/* TODO: LINE導線リンク（確認事項①のURL待ち） */}
-      <div className="py-8 border border-stone-200 text-center">
-        <p className="text-sm text-stone-400">LINEで相談する（導線リンク準備中）</p>
+      <div className="border-t border-stone-100 pt-10">
+        <p className="text-base text-stone-700 font-medium mb-8">まずは気軽に話してみませんか。</p>
+        {/* TODO: LINE_URL */}
+        <div className="inline-block border-b border-stone-400 pb-0.5 text-sm text-stone-400 cursor-not-allowed">
+          LINEで相談する（準備中）
+        </div>
       </div>
     </div>
   );
@@ -100,8 +117,13 @@ function CoachingContent() {
         人生の設計を一緒に考える、伴走型コーチングプログラム。<br />
         詳細は近日公開予定です。
       </p>
-      <div className="py-12 text-center border border-stone-200">
-        <p className="text-base text-stone-500">2026年秋、はじまります。</p>
+      <div className="border-t border-stone-100 pt-10">
+        <p className="text-base text-stone-700 font-medium mb-2">2026年秋、はじまります。</p>
+        <p className="text-sm text-stone-400 mb-8">スタートに先駆けて、案内をお届けします。</p>
+        {/* TODO: COACHING_URL */}
+        <div className="inline-block border-b border-stone-400 pb-0.5 text-sm text-stone-400 cursor-not-allowed">
+          事前のご案内を受け取る（準備中）
+        </div>
       </div>
     </div>
   );
