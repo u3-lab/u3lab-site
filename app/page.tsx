@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <>
       <section className="relative w-full mt-16">
-        <div className="relative aspect-video w-full">
+        <div className="relative aspect-video min-h-[420px] w-full">
           <Image
             src="/hero.png"
             alt="U3LAB チームビジュアル"
