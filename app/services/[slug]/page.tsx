@@ -47,7 +47,7 @@ export default async function ServicePage({
       <section className="py-24 px-6">
         <div className="max-w-3xl mx-auto">
           <h1 className="text-2xl font-medium text-stone-900 mb-4">{meta.title}</h1>
-          <p className="text-base text-stone-500 mb-16">{meta.catch}</p>
+          <p className="text-base text-stone-500 mb-16 leading-relaxed">{meta.catch}</p>
 
           {slug === 'photo' && <PhotoContent />}
           {slug === 'soudan' && <SoudanContent />}
@@ -61,22 +61,18 @@ export default async function ServicePage({
 function PhotoContent() {
   return (
     <div className="space-y-16">
-      {/* TODO: 撮影（ウェディング/ポートレート/出張・全国対応） */}
       <div>
-        <h2 className="text-lg font-medium text-stone-900 mb-4">撮影</h2>
-        <p className="text-sm text-stone-500">ウェディング・ポートレート・出張撮影（全国対応）</p>
-        {/* TODO: 既存導線リンク（確認事項①） */}
+        <p className="text-base text-stone-700 font-medium mb-6">技術より先に、見方が変わる。</p>
+        <div className="space-y-3 text-sm text-stone-600">
+          <p>ウェディング・ポートレート・出張撮影（全国対応）</p>
+          <p>写真教室（月額・単発）</p>
+          <p>SNS運用・映像制作</p>
+        </div>
+        {/* TODO: 各メニュー詳細・申込リンク（確認事項①の導線URL待ち） */}
       </div>
-      {/* TODO: 写真教室（月額/単発） */}
-      <div>
-        <h2 className="text-lg font-medium text-stone-900 mb-4">写真教室</h2>
-        <p className="text-sm text-stone-500">月額・単発コース</p>
-        {/* TODO: 写真塾申込リンク（確認事項①） */}
-      </div>
-      {/* TODO: SNS/映像・作品ギャラリー */}
-      <div>
-        <h2 className="text-lg font-medium text-stone-900 mb-4">SNS・映像</h2>
-        {/* TODO: 制作実績 */}
+      {/* TODO: 作品ギャラリー（写真素材待ち） */}
+      <div className="h-64 bg-stone-100 flex items-center justify-center">
+        <p className="text-xs text-stone-400">作品ギャラリー（写真素材待ち）</p>
       </div>
     </div>
   );
@@ -85,11 +81,13 @@ function PhotoContent() {
 function SoudanContent() {
   return (
     <div className="space-y-8">
-      {/* TODO: 概要/対象/流れ */}
-      <p className="text-sm text-stone-500">LINE個別お悩み相談</p>
-      {/* TODO: LINE導線リンク（確認事項①） */}
-      <div>
-        <p className="text-sm text-stone-400">（詳細・導線テキスト未確定）</p>
+      <p className="text-base text-stone-600 leading-loose">
+        LINEでの個別お悩み相談。<br />
+        気軽に、安心して、最初の一歩を話してみてください。
+      </p>
+      {/* TODO: LINE導線リンク（確認事項①のURL待ち） */}
+      <div className="py-8 border border-stone-200 text-center">
+        <p className="text-sm text-stone-400">LINEで相談する（導線リンク準備中）</p>
       </div>
     </div>
   );
@@ -98,9 +96,10 @@ function SoudanContent() {
 function CoachingContent() {
   return (
     <div className="space-y-8">
-      {/* TODO: 概要/対象/メニュー */}
-      <p className="text-sm text-stone-500">個人・起業家向けコーチング</p>
-      {/* TODO: 掲載可否は確認事項②待ち */}
+      <p className="text-base text-stone-600 leading-loose">
+        人生の設計を一緒に考える、伴走型コーチングプログラム。<br />
+        詳細は近日公開予定です。
+      </p>
       <div className="py-12 text-center border border-stone-200">
         <p className="text-base text-stone-500">2026年秋、はじまります。</p>
       </div>

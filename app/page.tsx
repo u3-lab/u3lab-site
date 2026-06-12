@@ -11,7 +11,7 @@ export default function Home() {
     <>
       {/* Hero */}
       <section className="relative min-h-screen flex items-end pb-24 bg-stone-100 pt-16">
-        {/* TODO: 象徴写真（背景画像） - next/image で bg 実装 */}
+        {/* TODO: 象徴写真（背景画像） */}
         <div className="max-w-5xl mx-auto w-full px-6">
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-medium tracking-tight text-stone-900 leading-tight">
             自分の人生を、<br />自分でデザインする。
@@ -25,10 +25,10 @@ export default function Home() {
       {/* U3LABとは */}
       <section className="py-24 px-6">
         <div className="max-w-2xl mx-auto text-center">
-          {/* TODO: U3LABとは 2-3行 */}
-          <p className="text-base text-stone-500 leading-loose">
-            U3LAB株式会社は、写真・相談・コーチングの3事業を通じて、<br />
-            一人ひとりの人生設計をサポートします。
+          <p className="text-base text-stone-600 leading-loose">
+            U3LABは、原田祐紀が主宰する事業体です。<br />
+            写真・個別相談・コーチングを通じて、<br />
+            「自分の人生を自分でデザインする」人を伴走しています。
           </p>
         </div>
       </section>
@@ -59,11 +59,11 @@ export default function Home() {
           {/* TODO: 代表写真 */}
           <div className="w-44 h-44 bg-stone-100 flex-shrink-0" />
           <div>
-            {/* TODO: 代表メッセージ（確認事項①〜④回答後） */}
-            <p className="text-base text-stone-600 leading-loose">
-              （代表メッセージ - テキスト未確定）
+            <p className="text-base text-stone-700 leading-loose">
+              「やりたいことはある。でも何から始めればいいかわからない。」<br />
+              その2〜3年を、一緒に動かしましょう。
             </p>
-            <p className="mt-4 text-sm text-stone-400">原田祐紀 / 代表取締役</p>
+            <p className="mt-4 text-sm text-stone-400">— 原田 祐紀</p>
           </div>
         </div>
       </section>
