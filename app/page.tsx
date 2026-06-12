@@ -8,10 +8,16 @@ export default function Home() {
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-medium tracking-tight text-stone-900 leading-tight">
             自分の人生を、<br />自分でデザインする。
           </h1>
-          {/* TODO: サブコピー確定待ち（光） */}
-          <p className="mt-6 text-base sm:text-lg text-stone-600 max-w-lg">
-            ひとりで、歩かなくていい。
-          </p>
+          <div className="mt-8 max-w-lg space-y-4">
+            <p className="text-base sm:text-lg text-stone-600 leading-loose">
+              やりたいことはある。<br />
+              でも、何から始めればいいかわからない。<br />
+              そのままにしてきた時間を、一緒に動かしませんか。
+            </p>
+            <p className="text-base sm:text-lg text-stone-700 leading-loose">
+              U3LABは、あなたらしい生き方を全力で応援します。
+            </p>
+          </div>
         </div>
       </section>
     </>
