@@ -36,14 +36,17 @@ export default function ContactPage() {
     <div className="pt-16">
       <section className="py-24 px-6">
         <div className="max-w-2xl mx-auto">
-          <h1 className="text-2xl font-medium text-stone-900 mb-4">お問い合わせ</h1>
-          <p className="text-base text-stone-500 mb-16 leading-relaxed">
-            写真・個別相談・コーチングなど、どんなことでもお気軽にどうぞ。
+          <h1 className="text-2xl font-medium text-stone-900 mb-4">ご依頼・お問い合わせ</h1>
+          <p className="text-base text-stone-500 mb-3 leading-relaxed">
+            講演・出演・出版・取材等のご依頼はこちらから。
+          </p>
+          <p className="text-sm text-stone-400 mb-16 leading-relaxed">
+            写真撮影・個別相談・コーチングのお申し込みは、各サービスページよりご連絡ください。
           </p>
 
           {status === 'done' ? (
             <p className="text-base text-stone-700 leading-loose">
-              送信しました。2〜3営業日以内にご連絡いたします。
+              送信しました。内容を確認のうえ、ご連絡いたします。
             </p>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-8">
@@ -77,7 +80,7 @@ export default function ContactPage() {
 
               <div>
                 <label htmlFor="message" className="block text-sm text-stone-600 mb-2">
-                  お問い合わせ内容
+                  ご依頼の内容
                 </label>
                 <textarea
                   id="message"
@@ -85,7 +88,7 @@ export default function ContactPage() {
                   required
                   rows={6}
                   className="w-full border-b border-stone-300 py-2 text-sm text-stone-900 bg-transparent focus:outline-none focus:border-stone-900 transition-colors placeholder:text-stone-300 resize-none"
-                  placeholder="ご質問・ご相談内容をご記入ください"
+                  placeholder="ご依頼の概要をご記入ください"
                 />
               </div>
 
