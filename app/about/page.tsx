@@ -15,7 +15,7 @@ export default function AboutPage() {
           {/* 代表メッセージ */}
           <div className="mb-16">
             <div className="flex flex-col sm:flex-row gap-10 mb-10">
-              <div className="relative w-40 h-52 flex-shrink-0 overflow-hidden">
+              <div className="relative w-52 h-72 flex-shrink-0 overflow-hidden">
                 <Image src="/about-rep.png" alt="原田 祐紀" fill className="object-cover object-top" />
               </div>
               <div className="space-y-3">
