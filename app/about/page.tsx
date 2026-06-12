@@ -18,7 +18,7 @@ export default function AboutPage() {
               <div className="w-40 h-52 bg-stone-100 flex-shrink-0" />
               <div className="space-y-3">
                 <p className="text-xs text-stone-400 leading-relaxed">
-                  写真家 / 写真教室主宰 / LiFE DESiGN LAB代表
+                  写真家 / 写真教室主宰 / 代表取締役
                 </p>
                 <p className="text-xl font-medium text-stone-900">原田 祐紀</p>
                 <p className="text-sm text-stone-600 italic">
@@ -56,7 +56,7 @@ export default function AboutPage() {
                 { label: '商号',   value: 'U3LAB株式会社' },
                 { label: '設立',   value: '2026年5月' },
                 { label: '所在地', value: '山口県防府市台道1339' },
-                { label: '代表',   value: '原田 祐紀' },
+                { label: '代表取締役', value: '原田 祐紀' },
                 { label: '資本金', value: '100万円' },
               ].map(({ label, value }) => (
                 <div key={label} className="flex gap-8 py-4 border-b border-stone-100">
