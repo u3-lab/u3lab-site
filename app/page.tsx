@@ -63,6 +63,30 @@ export default function Home() {
         </div>
 
       </section>
+
+      {/* ── ブランドコンセプト ── */}
+      <section className="w-full py-20 px-6 bg-white">
+        <div className="max-w-2xl mx-auto space-y-8 text-stone-700">
+          <p className="text-xl font-medium text-stone-900 leading-relaxed">
+            誰もが、幸せに生きる権利を持っている。
+          </p>
+          <p className="text-base leading-loose">
+            けれど実際には、悩みや不安、人間関係、社会のしがらみの中で、自分の人生を自分で選べなくなっている人が少なくありません。
+          </p>
+          <div className="space-y-1 text-base leading-loose">
+            <p>本当はこう生きたい。</p>
+            <p>もっと自分らしく在りたい。</p>
+            <p>誰かの価値観ではなく、自分の手で人生のハンドルを握りたい。</p>
+          </div>
+          <p className="text-base leading-loose">
+            U3LABは、そんな人たちが自分の心と向き合い、自分の人生を主体的に歩んでいくための学びときっかけを届けます。
+          </p>
+          <p className="text-base leading-loose">
+            写真、言葉、仏教、教育、発信。<br />
+            さまざまな表現と実践を通して、ひとりひとりが幸せを実感できる社会をつくっていきます。
+          </p>
+        </div>
+      </section>
     </>
   );
 }
