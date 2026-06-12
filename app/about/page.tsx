@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 
 export const metadata: Metadata = {
   title: 'About | U3LAB株式会社',
@@ -14,8 +15,9 @@ export default function AboutPage() {
           {/* 代表メッセージ */}
           <div className="mb-16">
             <div className="flex flex-col sm:flex-row gap-10 mb-10">
-              {/* TODO: 代表写真 */}
-              <div className="w-40 h-52 bg-stone-100 flex-shrink-0" />
+              <div className="relative w-40 h-52 flex-shrink-0 overflow-hidden">
+                <Image src="/about-rep.png" alt="原田 祐紀" fill className="object-cover object-top" />
+              </div>
               <div className="space-y-3">
                 <p className="text-xs text-stone-400 leading-relaxed">
                   写真家 / 写真教室主宰 / 代表取締役
