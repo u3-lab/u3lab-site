@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 
 export const metadata: Metadata = {
   title: 'チームメンバー | U3LAB株式会社',
@@ -72,8 +73,15 @@ export default function MembersPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 mb-20">
             {MEMBERS.map((m) => (
               <div key={m.id} className="space-y-4">
-                {/* TODO: メンバー写真/アイコン */}
-                <div className="aspect-square bg-stone-100" />
+                <div className="aspect-square bg-stone-100 overflow-hidden relative">
+                  <Image
+                    src={`/members/${m.id}.png`}
+                    alt={m.name}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 25vw"
+                  />
+                </div>
                 <div>
                   <p className="text-sm font-medium text-stone-900">{m.name}</p>
                   <p className="text-xs text-stone-400 mt-0.5">{m.role}</p>
