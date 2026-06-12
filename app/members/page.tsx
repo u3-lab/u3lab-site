@@ -58,7 +58,20 @@ const MEMBERS = [
 
 export default function MembersPage() {
   return (
-    <div className="pt-16">
+    <div>
+      {/* ヘッダービジュアル（カラーグループ写真） */}
+      <div className="mt-16 w-full">
+        <div className="relative aspect-video w-full">
+          <Image
+            src="/members-hero.png"
+            alt="U3LABチーム集合写真"
+            fill
+            className="object-cover object-center"
+            priority
+          />
+        </div>
+      </div>
+
       <section className="py-24 px-6">
         <div className="max-w-5xl mx-auto">
           <h1 className="text-2xl font-medium text-stone-900 mb-4">チームメンバー</h1>
