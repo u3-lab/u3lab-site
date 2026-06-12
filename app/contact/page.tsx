@@ -1,61 +1,109 @@
-import type { Metadata } from 'next';
+'use client';
 
-export const metadata: Metadata = {
-  title: 'お問い合わせ | U3LAB株式会社',
-};
+import { useState } from 'react';
+
+const FORMSPREE_ENDPOINT = process.env.NEXT_PUBLIC_FORMSPREE_ID
+  ? `https://formspree.io/f/${process.env.NEXT_PUBLIC_FORMSPREE_ID}`
+  : '';
 
 export default function ContactPage() {
+  const [status, setStatus] = useState<'idle' | 'sending' | 'done' | 'error'>('idle');
+
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    if (!FORMSPREE_ENDPOINT) return;
+    setStatus('sending');
+    const form = e.currentTarget;
+    const data = new FormData(form);
+    try {
+      const res = await fetch(FORMSPREE_ENDPOINT, {
+        method: 'POST',
+        body: data,
+        headers: { Accept: 'application/json' },
+      });
+      if (res.ok) {
+        setStatus('done');
+        form.reset();
+      } else {
+        setStatus('error');
+      }
+    } catch {
+      setStatus('error');
+    }
+  }
+
   return (
     <div className="pt-16">
       <section className="py-24 px-6">
         <div className="max-w-2xl mx-auto">
           <h1 className="text-2xl font-medium text-stone-900 mb-4">お問い合わせ</h1>
-          <p className="text-base text-stone-500 mb-4 leading-relaxed">
-            どのサービスか迷っていても、まずここから。
-          </p>
-          <p className="text-sm text-stone-400 mb-16 leading-relaxed">
-            写真・相談・コーチング、すべてのお問い合わせをお受けしています。
+          <p className="text-base text-stone-500 mb-16 leading-relaxed">
+            写真・個別相談・コーチングなど、どんなことでもお気軽にどうぞ。
           </p>
 
-          <div className="space-y-10">
-            {/* 写真 */}
-            <div className="border-t border-stone-100 pt-8">
-              <h2 className="text-base font-medium text-stone-900 mb-4">写真・写真教室</h2>
-              {/* TODO: 写真塾申込リンク（URL待ち） */}
-              <p className="text-sm text-stone-400">（申込リンク準備中）</p>
-            </div>
+          {status === 'done' ? (
+            <p className="text-base text-stone-700 leading-loose">
+              送信しました。2〜3営業日以内にご連絡いたします。
+            </p>
+          ) : (
+            <form onSubmit={handleSubmit} className="space-y-8">
+              <div>
+                <label htmlFor="name" className="block text-sm text-stone-600 mb-2">
+                  お名前
+                </label>
+                <input
+                  id="name"
+                  name="name"
+                  type="text"
+                  required
+                  className="w-full border-b border-stone-300 py-2 text-sm text-stone-900 bg-transparent focus:outline-none focus:border-stone-900 transition-colors placeholder:text-stone-300"
+                  placeholder="山田 太郎"
+                />
+              </div>
 
-            {/* 相談 */}
-            <div className="border-t border-stone-100 pt-8">
-              <h2 className="text-base font-medium text-stone-900 mb-4">LINE個別相談</h2>
-              {/* TODO: LINE URL待ち */}
-              <p className="text-sm text-stone-400">（LINEリンク準備中）</p>
-            </div>
+              <div>
+                <label htmlFor="email" className="block text-sm text-stone-600 mb-2">
+                  メールアドレス
+                </label>
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  required
+                  className="w-full border-b border-stone-300 py-2 text-sm text-stone-900 bg-transparent focus:outline-none focus:border-stone-900 transition-colors placeholder:text-stone-300"
+                  placeholder="your@email.com"
+                />
+              </div>
 
-            {/* コーチング */}
-            <div className="border-t border-stone-100 pt-8">
-              <h2 className="text-base font-medium text-stone-900 mb-4">コーチング</h2>
-              <p className="text-sm text-stone-500">2026年秋、はじまります。</p>
-            </div>
+              <div>
+                <label htmlFor="message" className="block text-sm text-stone-600 mb-2">
+                  お問い合わせ内容
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  required
+                  rows={6}
+                  className="w-full border-b border-stone-300 py-2 text-sm text-stone-900 bg-transparent focus:outline-none focus:border-stone-900 transition-colors placeholder:text-stone-300 resize-none"
+                  placeholder="ご質問・ご相談内容をご記入ください"
+                />
+              </div>
 
-            {/* 一般問い合わせ */}
-            <div className="border-t border-stone-100 pt-8">
-              <h2 className="text-base font-medium text-stone-900 mb-4">メール</h2>
-              <a
-                href="mailto:info@u3lab.jp"
-                className="text-sm text-stone-700 hover:text-stone-900 transition-colors underline underline-offset-4"
+              {status === 'error' && (
+                <p className="text-sm text-red-500">
+                  送信に失敗しました。時間をおいて再度お試しください。
+                </p>
+              )}
+
+              <button
+                type="submit"
+                disabled={status === 'sending'}
+                className="text-sm text-stone-900 border-b border-stone-900 pb-0.5 hover:opacity-60 transition-opacity disabled:opacity-40"
               >
-                info@u3lab.jp
-              </a>
-            </div>
-
-            {/* SNS */}
-            <div className="border-t border-stone-100 pt-8">
-              <h2 className="text-base font-medium text-stone-900 mb-4">SNS</h2>
-              {/* TODO: SNSリンク（写真事業傘下・URL待ち） */}
-              <p className="text-sm text-stone-400">（SNSリンク準備中）</p>
-            </div>
-          </div>
+                {status === 'sending' ? '送信中…' : '送信する'}
+              </button>
+            </form>
+          )}
         </div>
       </section>
     </div>
