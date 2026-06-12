@@ -75,14 +75,11 @@ export default function MembersPage() {
       <section className="py-24 px-6">
         <div className="max-w-5xl mx-auto">
           <h1 className="text-2xl font-medium text-stone-900 mb-4">チームメンバー</h1>
-          <div className="mb-16 max-w-xl space-y-3">
-            <p className="text-base text-stone-700">
-              U3LABのチームは、代表ひとりとAI {MEMBERS.length}人です。
-            </p>
-            <p className="text-sm text-stone-500 leading-loose">
-              ただし、AIは命令を待つプログラムではありません。<br />
-              それぞれが専門性と自律性を持ち、自ら考え動く——<br />
-              そういうチームです。
+          <div className="mb-16 max-w-xl">
+            <p className="text-base text-stone-700 leading-loose">
+              U3LABのチームは、代表ひとりとAI {MEMBERS.length}人です。<br />
+              命令を待つプログラムではなく、それぞれが個性と専門性を持ち、<br />
+              互いに相談・議論しながら動く、生きたチームです。
             </p>
           </div>
 
