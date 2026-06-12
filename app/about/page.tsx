@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: '会社情報 | U3LAB株式会社',
+  title: 'About | U3LAB株式会社',
 };
 
 export default function AboutPage() {
@@ -9,11 +9,48 @@ export default function AboutPage() {
     <div className="pt-16">
       <section className="py-24 px-6">
         <div className="max-w-3xl mx-auto">
-          <h1 className="text-2xl font-medium text-stone-900 mb-12">会社情報</h1>
+          <h1 className="text-2xl font-medium text-stone-900 mb-12">About</h1>
+
+          {/* 代表メッセージ */}
+          <div className="mb-16">
+            <div className="flex flex-col sm:flex-row gap-10 mb-10">
+              {/* TODO: 代表写真 */}
+              <div className="w-40 h-52 bg-stone-100 flex-shrink-0" />
+              <div className="space-y-3">
+                <p className="text-xs text-stone-400 leading-relaxed">
+                  写真家 / 写真教室主宰 / LiFE DESiGN LAB代表
+                </p>
+                <p className="text-xl font-medium text-stone-900">原田 祐紀</p>
+                <p className="text-sm text-stone-600 italic">
+                  写真と言葉で、人生の見方を変える人。
+                </p>
+              </div>
+            </div>
+            <p className="text-base text-stone-600 leading-loose">
+              写真家として、山口を拠点に全国で活動。<br />
+              「技術より先に、見方が変わる」という信念で写真教室を主宰し、<br />
+              受講者の写真を3ヶ月で変えてきました。
+            </p>
+            <p className="mt-6 text-base text-stone-600 leading-loose">
+              コーチとして、「やりたいことはあるのに動けない」という問いと向き合い続けてきました。<br />
+              その経験から生まれたのが、LiFE DESiGN LAB。<br />
+              自分の人生を自分でデザインする人を、伴走型で育てます。
+            </p>
+            <p className="mt-6 text-base text-stone-600 leading-loose">
+              U3LABは、その活動のすべてをまとめた場所です。
+            </p>
+            <blockquote className="mt-8 border-l-2 border-stone-300 pl-6 py-2">
+              <p className="text-base text-stone-700 leading-loose">
+                「やりたいことはある。でも何から始めればいいかわからない。」<br />
+                その2〜3年を、一緒に動かしましょう。
+              </p>
+              <p className="mt-3 text-sm text-stone-400">— 原田 祐紀</p>
+            </blockquote>
+          </div>
 
           {/* 会社概要 */}
-          <div className="mb-16">
-            <h2 className="text-lg font-medium text-stone-900 mb-6">会社概要</h2>
+          <div>
+            <h2 className="text-lg font-medium text-stone-900 mb-6">Company</h2>
             <dl className="space-y-0">
               {[
                 { label: '商号',   value: 'U3LAB株式会社' },
@@ -28,14 +65,6 @@ export default function AboutPage() {
                 </div>
               ))}
             </dl>
-          </div>
-
-          {/* 理念 */}
-          <div>
-            <h2 className="text-lg font-medium text-stone-900 mb-6">理念</h2>
-            <p className="text-base text-stone-600 leading-loose">
-              自分の人生を、自分でデザインする。
-            </p>
           </div>
         </div>
       </section>

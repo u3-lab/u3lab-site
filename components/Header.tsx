@@ -9,19 +9,16 @@ export default function Header() {
         </Link>
         <nav className="flex items-center gap-8">
           <Link href="/services" className="text-sm text-stone-600 hover:text-stone-900 transition-colors">
-            事業
-          </Link>
-          <Link href="/profile" className="text-sm text-stone-600 hover:text-stone-900 transition-colors">
-            プロフィール
-          </Link>
-          <Link href="/members" className="text-sm text-stone-600 hover:text-stone-900 transition-colors">
-            メンバー
+            Works
           </Link>
           <Link href="/about" className="text-sm text-stone-600 hover:text-stone-900 transition-colors">
-            会社情報
+            About
+          </Link>
+          <Link href="/members" className="text-sm text-stone-600 hover:text-stone-900 transition-colors">
+            Member
           </Link>
           <Link href="/contact" className="text-sm text-stone-600 hover:text-stone-900 transition-colors">
-            お問い合わせ
+            Contact
           </Link>
         </nav>
       </div>
