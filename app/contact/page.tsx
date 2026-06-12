@@ -38,10 +38,11 @@ export default function ContactPage() {
         <div className="max-w-2xl mx-auto">
           <h1 className="text-2xl font-medium text-stone-900 mb-4">ご依頼・お問い合わせ</h1>
           <p className="text-base text-stone-500 mb-3 leading-relaxed">
-            講演・出演・出版・取材等のご依頼はこちらから。
+            講演・出演・出版・取材などのご依頼はこちらから。
           </p>
           <p className="text-sm text-stone-400 mb-16 leading-relaxed">
-            写真撮影・個別相談・コーチングのお申し込みは、各サービスページよりご連絡ください。
+            撮影・写真教室・相談・コーチングについては、<br />
+            各サービスページよりお問い合わせください。
           </p>
 
           {status === 'done' ? (
