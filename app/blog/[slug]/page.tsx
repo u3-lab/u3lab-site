@@ -62,7 +62,7 @@ export default async function BlogPostPage({
           <time className="block text-xs text-stone-400 mb-4">{post.date}</time>
           <h1 className="text-2xl font-medium text-stone-900 mb-6">{post.title}</h1>
           <div className="flex items-center gap-3 mb-12">
-            <div className="relative w-8 h-8 overflow-hidden flex-shrink-0">
+            <div className="relative w-12 h-12 overflow-hidden flex-shrink-0">
               <Image
                 src={post.author.photo}
                 alt={post.author.name}
