@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
-import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: '事業 | U3LAB株式会社',
@@ -20,6 +19,7 @@ const SERVICES = [
     catch: 'まずは話してみることから。',
     desc: '公式LINEによる個別のお悩み相談',
     image: '/services/soudan.png',
+    note: '※掲載写真はイメージです。対面でのご相談は承っておりません（公式LINEによる個別相談のみ）。',
   },
   {
     slug: 'coaching',
@@ -38,11 +38,7 @@ export default function ServicesPage() {
           <h1 className="text-2xl font-medium text-stone-900 mb-16">事業</h1>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
             {SERVICES.map((s) => (
-              <Link
-                key={s.slug}
-                href={`/services/${s.slug}`}
-                className="group block"
-              >
+              <div key={s.slug}>
                 <div className="aspect-square relative overflow-hidden mb-6">
                   <Image
                     src={s.image}
@@ -55,7 +51,10 @@ export default function ServicesPage() {
                 <h2 className="text-base font-medium text-stone-900 mb-2">{s.title}</h2>
                 <p className="text-sm text-stone-500 mb-3 leading-relaxed">{s.catch}</p>
                 <p className="text-xs text-stone-400 leading-relaxed">{s.desc}</p>
-              </Link>
+                {s.note && (
+                  <p className="text-xs text-stone-400 leading-relaxed mt-3">{s.note}</p>
+                )}
+              </div>
             ))}
           </div>
         </div>

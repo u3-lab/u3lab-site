@@ -105,9 +105,6 @@ function SoudanContent() {
           LINEで相談する（準備中）
         </div>
       </div>
-      <p className="text-xs text-stone-400 leading-relaxed">
-        ※掲載写真はイメージです。対面でのご相談は承っておりません（公式LINEによる個別相談のみ）。
-      </p>
     </div>
   );
 }
