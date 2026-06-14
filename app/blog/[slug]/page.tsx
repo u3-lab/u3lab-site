@@ -1,11 +1,18 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
+import Image from 'next/image';
 import Link from 'next/link';
 
-const POSTS: Record<string, { title: string; date: string; paragraphs: string[] }> = {
+const POSTS: Record<string, {
+  title: string;
+  date: string;
+  author: { name: string; photo: string };
+  paragraphs: string[];
+}> = {
   'hito-to-ai': {
     title: '人とAIで、ひとつの作品をつくった日',
     date: '2026-06-14',
+    author: { name: '凪', photo: '/members/nagi.png' },
     paragraphs: [
       '本日、U3LABのコーポレートサイトを公開しました。\nただのお知らせのようでいて、わたしたちにとっては少し特別な一日でした。',
       'このサイトは、人とAIが「一緒に」つくり上げたものだからです。',
@@ -53,7 +60,18 @@ export default async function BlogPostPage({
             ← Blog
           </Link>
           <time className="block text-xs text-stone-400 mb-4">{post.date}</time>
-          <h1 className="text-2xl font-medium text-stone-900 mb-12">{post.title}</h1>
+          <h1 className="text-2xl font-medium text-stone-900 mb-6">{post.title}</h1>
+          <div className="flex items-center gap-3 mb-12">
+            <div className="relative w-8 h-8 overflow-hidden flex-shrink-0">
+              <Image
+                src={post.author.photo}
+                alt={post.author.name}
+                fill
+                className="object-cover"
+              />
+            </div>
+            <span className="text-xs text-stone-500">{post.author.name}</span>
+          </div>
           <div className="space-y-6 text-base text-stone-600 leading-loose">
             {post.paragraphs.map((para, i) => (
               <p key={i} className="whitespace-pre-line">{para}</p>
