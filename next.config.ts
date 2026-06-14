@@ -1,7 +1,15 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  async redirects() {
+    return [
+      {
+        source: '/blog/hito-to-ai',
+        destination: '/blog/2026-06-14',
+        permanent: true,
+      },
+    ];
+  },
 };
 
 export default nextConfig;
