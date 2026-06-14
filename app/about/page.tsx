@@ -20,7 +20,7 @@ export default function AboutPage() {
               </div>
               <div className="space-y-3">
                 <p className="text-xs text-stone-400 leading-relaxed">
-                  浄土真宗 明善寺 住職 / 写真家 / 写真教室主宰 / コーチングメンター / 経営者
+                  浄土真宗 明善寺 住職 / 写真家 / 写真教室主宰 / コンサルティング・コーチングメンター / 経営者
                 </p>
                 <p className="text-xl font-medium text-stone-900">原田 祐紀</p>
               </div>
@@ -29,7 +29,7 @@ export default function AboutPage() {
               <p className="text-lg font-medium text-stone-800">見方が変わると、人生が変わる。</p>
               <p>
                 浄土真宗 明善寺の住職。<br />
-                そして、写真家であり、写真教室の主宰であり、コーチングメンターであり、経営者でもあります。<br />
+                そして、写真家であり、写真教室の主宰であり、コンサルティング・コーチングメンターであり、経営者でもあります。<br />
                 肩書きは多くても、やっていることはいつも一つ。——「自分らしく生きる」人を、増やすこと。
               </p>
               <p>
@@ -44,7 +44,7 @@ export default function AboutPage() {
                 住職としては、法務と寺院経営に携わりながら、SNSでも精力的に発信。住職アカウントは20万人、写真家アカウントは3万人のフォロワーへ、日々「生き方」を届けています。
               </p>
               <p>
-                コーチングメンターとして大切にしているのは、「自分と向き合い、自分らしく生きる」こと。<br />
+                コンサルティング・コーチングメンターとして大切にしているのは、「自分と向き合い、自分らしく生きる」こと。<br />
                 その実践の場として生まれたのが、LiFE DESiGN LAB。<br />
                 U3LABは、これらの活動のすべてをまとめた場所です。
               </p>
