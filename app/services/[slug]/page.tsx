@@ -6,15 +6,15 @@ type Slug = 'photo' | 'soudan' | 'coaching';
 const SERVICE_META: Record<Slug, { title: string; catch: string }> = {
   photo: {
     title: '写真撮影・写真教室事業',
-    catch: '見方が変わると、写真が変わる。',
+    catch: '写真を通じて、人生を豊かにする。',
   },
   soudan: {
     title: '相談事業',
-    catch: 'まずは話してみることから。',
+    catch: '自分の人生を自分の手に取り戻す。',
   },
   coaching: {
-    title: 'コーチング事業',
-    catch: 'ふんわりしたやりたいを、最初の一歩に。',
+    title: 'コンサルティング・コーチング事業',
+    catch: '自分の人生を、自分でデザインする。',
   },
 };
 

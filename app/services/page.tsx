@@ -9,7 +9,7 @@ const SERVICES = [
   {
     slug: 'photo',
     title: '写真撮影・写真教室事業',
-    catch: '見方が変わると、写真が変わる。',
+    catch: '写真を通じて、人生を豊かにする。',
     desc: '写真撮影（ウェディング・ポートレート・プロフィール）、写真教室事業',
     image: '/services/photo.png',
     cta: { label: '公式LINE', href: 'https://lin.ee/ndMLYPo' },
@@ -18,7 +18,7 @@ const SERVICES = [
   {
     slug: 'soudan',
     title: '相談事業',
-    catch: 'まずは話してみることから。',
+    catch: '自分の人生を自分の手に取り戻す。',
     desc: '公式LINEによる個別のお悩み相談',
     image: '/services/soudan.png',
     note: '※掲載写真はイメージです。対面でのご相談は承っておりません（公式LINEによる個別相談のみ）。',
@@ -27,8 +27,8 @@ const SERVICES = [
   },
   {
     slug: 'coaching',
-    title: 'コーチング事業',
-    catch: 'ふんわりしたやりたいを、最初の一歩に。',
+    title: 'コンサルティング・コーチング事業',
+    catch: '自分の人生を、自分でデザインする。',
     desc: '個人・起業家向けコーチング、オンラインサロン・個別コーチング',
     image: '/services/coaching.png',
     cta: { label: 'しばらくお待ちください', href: null },
