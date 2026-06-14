@@ -18,7 +18,7 @@ const SERVICES = [
   {
     slug: 'soudan',
     title: '相談事業',
-    catch: '自分の人生を自分の手に取り戻す。',
+    catch: '自分の人生を、自分の手に取り戻す。',
     desc: '公式LINEによる個別のお悩み相談',
     image: '/services/soudan.png',
     note: '※掲載写真はイメージです。対面でのご相談は承っておりません（公式LINEによる個別相談のみ）。',

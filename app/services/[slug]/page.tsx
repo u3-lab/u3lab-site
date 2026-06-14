@@ -10,7 +10,7 @@ const SERVICE_META: Record<Slug, { title: string; catch: string }> = {
   },
   soudan: {
     title: '相談事業',
-    catch: '自分の人生を自分の手に取り戻す。',
+    catch: '自分の人生を、自分の手に取り戻す。',
   },
   coaching: {
     title: 'コンサルティング・コーチング事業',
