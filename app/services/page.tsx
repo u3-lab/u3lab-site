@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
@@ -8,21 +9,24 @@ export const metadata: Metadata = {
 const SERVICES = [
   {
     slug: 'photo',
-    title: '写真',
+    title: '写真撮影・写真教室事業',
     catch: '見方が変わると、写真が変わる。',
-    desc: '撮影（ウェディング・ポートレート・出張）、写真教室、SNS／映像制作',
+    desc: '写真撮影（ウェディング・ポートレート・プロフィール）、写真教室事業',
+    image: '/services/photo.png',
   },
   {
     slug: 'soudan',
-    title: '相談',
+    title: '相談事業',
     catch: 'まずは話してみることから。',
-    desc: 'LINE個別お悩み相談',
+    desc: '公式LINEによる個別のお悩み相談',
+    image: '/services/soudan.png',
   },
   {
     slug: 'coaching',
-    title: 'コーチング',
+    title: 'コーチング事業',
     catch: 'ふんわりしたやりたいを、最初の一歩に。',
-    desc: '個人・起業家向けコーチング',
+    desc: '個人・起業家向けコーチング、オンラインサロン・個別コーチング',
+    image: '/services/coaching.png',
   },
 ];
 
@@ -39,8 +43,15 @@ export default function ServicesPage() {
                 href={`/services/${s.slug}`}
                 className="group block"
               >
-                {/* TODO: 事業サムネイル写真 */}
-                <div className="aspect-square bg-stone-100 mb-6" />
+                <div className="aspect-square relative overflow-hidden mb-6">
+                  <Image
+                    src={s.image}
+                    alt={s.title}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 640px) 100vw, 33vw"
+                  />
+                </div>
                 <h2 className="text-base font-medium text-stone-900 mb-2">{s.title}</h2>
                 <p className="text-sm text-stone-500 mb-3 leading-relaxed">{s.catch}</p>
                 <p className="text-xs text-stone-400 leading-relaxed">{s.desc}</p>

@@ -5,15 +5,15 @@ type Slug = 'photo' | 'soudan' | 'coaching';
 
 const SERVICE_META: Record<Slug, { title: string; catch: string }> = {
   photo: {
-    title: '写真',
+    title: '写真撮影・写真教室事業',
     catch: '見方が変わると、写真が変わる。',
   },
   soudan: {
-    title: '相談',
+    title: '相談事業',
     catch: 'まずは話してみることから。',
   },
   coaching: {
-    title: 'コーチング',
+    title: 'コーチング事業',
     catch: 'ふんわりしたやりたいを、最初の一歩に。',
   },
 };
@@ -64,9 +64,8 @@ function PhotoContent() {
       <div>
         <p className="text-base text-stone-700 font-medium mb-6">技術より先に、見方が変わる。</p>
         <div className="space-y-3 text-sm text-stone-600">
-          <p>ウェディング・ポートレート・出張撮影（全国対応）</p>
-          <p>写真教室（月額・単発）</p>
-          <p>SNS運用・映像制作</p>
+          <p>ウェディング・ポートレート・プロフィール撮影</p>
+          <p>写真教室事業（月額・単発）</p>
         </div>
       </div>
       {/* TODO: 作品ギャラリー（写真素材待ち） */}
