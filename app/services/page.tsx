@@ -13,6 +13,7 @@ const SERVICES = [
     desc: '写真撮影（ウェディング・ポートレート・プロフィール）、写真教室事業',
     image: '/services/photo.png',
     cta: { label: '公式LINE', href: 'https://lin.ee/ndMLYPo' },
+    ig: 'https://www.instagram.com/u3_foto/',
   },
   {
     slug: 'soudan',
@@ -22,6 +23,7 @@ const SERVICES = [
     image: '/services/soudan.png',
     note: '※掲載写真はイメージです。対面でのご相談は承っておりません（公式LINEによる個別相談のみ）。',
     cta: { label: '公式LINE', href: 'https://lin.ee/zvYe1tQ' },
+    ig: 'https://www.instagram.com/yuusan_juusyoku/',
   },
   {
     slug: 'coaching',
@@ -30,6 +32,7 @@ const SERVICES = [
     desc: '個人・起業家向けコーチング、オンラインサロン・個別コーチング',
     image: '/services/coaching.png',
     cta: { label: 'しばらくお待ちください', href: null },
+    ig: 'https://www.instagram.com/haradayuuki_/',
   },
 ];
 
@@ -57,22 +60,34 @@ export default function ServicesPage() {
                 {s.note && (
                   <p className="text-xs text-stone-400 leading-relaxed mt-3">{s.note}</p>
                 )}
-                {s.cta && (
-                  s.cta.href ? (
+                <div className="flex flex-wrap gap-2 mt-4">
+                  {s.cta && (
+                    s.cta.href ? (
+                      <a
+                        href={s.cta.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-block border border-stone-400 px-4 py-2 text-xs text-stone-600 hover:bg-stone-50 transition-colors"
+                      >
+                        {s.cta.label}
+                      </a>
+                    ) : (
+                      <span className="inline-block border border-stone-200 px-4 py-2 text-xs text-stone-300 cursor-not-allowed">
+                        {s.cta.label}
+                      </span>
+                    )
+                  )}
+                  {s.ig && (
                     <a
-                      href={s.cta.href}
+                      href={s.ig}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-block mt-4 border border-stone-400 px-4 py-2 text-xs text-stone-600 hover:bg-stone-50 transition-colors"
+                      className="inline-block border border-stone-400 px-4 py-2 text-xs text-stone-600 hover:bg-stone-50 transition-colors"
                     >
-                      {s.cta.label}
+                      Instagram
                     </a>
-                  ) : (
-                    <span className="inline-block mt-4 border border-stone-200 px-4 py-2 text-xs text-stone-300 cursor-not-allowed">
-                      {s.cta.label}
-                    </span>
-                  )
-                )}
+                  )}
+                </div>
               </div>
             ))}
           </div>
