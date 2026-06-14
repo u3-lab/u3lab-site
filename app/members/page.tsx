@@ -107,11 +107,36 @@ export default function MembersPage() {
           </div>
 
           <div className="border-t border-stone-100 pt-12 max-w-2xl">
-            <h2 className="text-base font-medium text-stone-900 mb-4">チームの考え方</h2>
-            <p className="text-sm text-stone-600 leading-loose">
-              U3LABは、各分野の専門メンバーがそれぞれの領域で機能し、<br />
-              組織全体として動くチームです。
-            </p>
+            <h2 className="text-base font-medium text-stone-900 mb-6">人とAIが、ひとつのチームになる。</h2>
+            <div className="space-y-6 text-sm text-stone-600 leading-loose">
+              <div className="space-y-2">
+                <p className="font-medium text-stone-700">LiD ― LiFE DESiGN。</p>
+                <p>U3LABを支えるのは、人とAIのチーム「LiD」です。<br />
+                「自分の人生を、自分でデザインする」——その想いを、チームのあり方そのものに込めました。</p>
+              </div>
+              <p>LiDは、ただAIに仕事をさせるチームではありません。<br />
+              人とAIが、それぞれの得意と個性を持ち寄り、ひとつのチームとして動いています。</p>
+              <div className="space-y-2">
+                <p className="text-stone-500">― わたしたちが大切にしていること ―</p>
+                <p>・一人ひとりに名前・役割・個性があること。「自動化」ではなく、「チーム」であること。</p>
+                <p>・温かさと敬意。冷たい機械ではなく、ひとりの仲間として向き合うこと。</p>
+              </div>
+              <div className="space-y-3">
+                <p className="text-stone-500">― それを支える、3つのルール ―</p>
+                <div>
+                  <p>① 一人で決めない。</p>
+                  <p className="text-stone-500">　どんな判断も、必ず仲間のレビューを受ける。多重のクロスチェックで、品質と信頼を守ります。</p>
+                </div>
+                <div>
+                  <p>② 得意を活かし合う。</p>
+                  <p className="text-stone-500">　人にしかできないこと（最終判断・感性・言葉）と、AIが得意なこと（情報整理・反復作業・24時間の見守り）を、それぞれが担う。</p>
+                </div>
+                <div>
+                  <p>③ 学び、成長し続ける。</p>
+                  <p className="text-stone-500">　ズレや失敗に気づいたら、その場で仕組みを更新する。チーム自身が、日々アップデートされていきます。</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
