@@ -20,34 +20,39 @@ export default function AboutPage() {
               </div>
               <div className="space-y-3">
                 <p className="text-xs text-stone-400 leading-relaxed">
-                  写真家 / 写真教室主宰 / 代表取締役
+                  経営者 / 浄土真宗 明善寺 住職 / 写真家 / 写真教室主宰 / コーチングメンター
                 </p>
                 <p className="text-xl font-medium text-stone-900">原田 祐紀</p>
-                <p className="text-sm text-stone-600 italic">
-                  写真と言葉で、人生の見方を変える人。
-                </p>
               </div>
             </div>
-            <p className="text-base text-stone-600 leading-loose">
-              写真家として、山口を拠点に全国で活動。<br />
-              「技術より先に、見方が変わる」という信念で写真教室を主宰し、<br />
-              受講者の写真を3ヶ月で変えてきました。
-            </p>
-            <p className="mt-6 text-base text-stone-600 leading-loose">
-              コーチとして、「やりたいことはあるのに動けない」という問いと向き合い続けてきました。<br />
-              その経験から生まれたのが、LiFE DESiGN LAB。<br />
-              自分の人生を自分でデザインする人を、伴走型で育てます。
-            </p>
-            <p className="mt-6 text-base text-stone-600 leading-loose">
-              U3LABは、その活動のすべてをまとめた場所です。
-            </p>
-            <blockquote className="mt-8 border-l-2 border-stone-300 pl-6 py-2">
-              <p className="text-base text-stone-700 leading-loose">
-                「やりたいことはある。でも何から始めればいいかわからない。」<br />
-                その2〜3年を、一緒に動かしましょう。
+            <div className="space-y-6 text-base text-stone-600 leading-loose">
+              <p className="text-lg font-medium text-stone-800">見方が変わると、人生が変わる。</p>
+              <p>
+                写真家、写真教室の主宰、コーチングメンター、お寺の住職、そして経営者。<br />
+                肩書きは多くても、やっていることはいつも一つです。——「自分らしく生きる」人を、増やすこと。
               </p>
-              <p className="mt-3 text-sm text-stone-400">— 原田 祐紀</p>
-            </blockquote>
+              <p>
+                はじまりは、教育でした。<br />
+                23年間、障害児教育の専門家として教壇に立ち、一人ひとりの「その人らしさ」と向き合い続けてきました。
+              </p>
+              <p>
+                写真家としては、世界フォトコンテストで2年連続 世界2位・3位を受賞。<br />
+                ネットに溢れる薄く不確かな情報ではなく、「正しい写真との向き合い方」を伝えたい——。その思いで開いた写真教室には、現在260名の受講生。これまでに200名のプロフォトグラファーを送り出してきました。
+              </p>
+              <p>
+                浄土真宗 明善寺の住職としては、法務と寺院経営に携わりながら、SNSでも精力的に発信。住職アカウントは20万人、写真家アカウントは3万人のフォロワーへ、日々「生き方」を届けています。
+              </p>
+              <p>
+                そして、コーチングメンターとして大切にしているのは、「自分と向き合い、自分らしく生きる」こと。<br />
+                その実践の場として生まれたのが、LiFE DESiGN LAB。<br />
+                U3LABは、これらの活動のすべてをまとめた場所です。
+              </p>
+              <p>
+                自分の人生を、自分らしくデザインする。<br />
+                その一歩を、ここから一緒に。
+              </p>
+              <p className="text-stone-400">— 原田 祐紀</p>
+            </div>
           </div>
 
           {/* 会社概要 */}
