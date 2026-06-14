@@ -51,7 +51,7 @@ export default function Header() {
 
       {/* モバイルメニュー */}
       {open && (
-        <nav className="sm:hidden bg-white border-t border-stone-100 px-6 py-6 flex flex-col gap-5">
+        <nav className="sm:hidden bg-white border-t border-stone-100 px-6 py-6 flex flex-col gap-5 items-end">
           {NAV_ITEMS.map((item) => (
             <Link
               key={item.href}
