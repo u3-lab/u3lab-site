@@ -22,6 +22,7 @@ export default function AboutPage() {
                 <p className="text-xs text-stone-400 leading-relaxed">
                   浄土真宗 明善寺 住職 / 写真家 / 写真教室主宰 / コンサルティング・コーチングメンター / 経営者
                 </p>
+                <p className="text-xs text-stone-500 mt-1">U3LAB株式会社 代表取締役</p>
                 <p className="text-xl font-medium text-stone-900">原田 祐紀</p>
               </div>
             </div>
