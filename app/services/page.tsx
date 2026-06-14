@@ -44,7 +44,7 @@ export default function ServicesPage() {
           <h1 className="text-2xl font-medium text-stone-900 mb-16">事業</h1>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
             {SERVICES.map((s) => (
-              <div key={s.slug}>
+              <div key={s.slug} className="flex flex-col">
                 <div className="aspect-square relative overflow-hidden mb-6">
                   <Image
                     src={s.image}
@@ -54,12 +54,16 @@ export default function ServicesPage() {
                     sizes="(max-width: 640px) 100vw, 33vw"
                   />
                 </div>
-                <h2 className="text-base font-medium text-stone-900 mb-2">{s.title}</h2>
-                <p className="text-sm text-stone-500 mb-3 leading-relaxed">{s.catch}</p>
-                <p className="text-xs text-stone-400 leading-relaxed">{s.desc}</p>
-                {s.note && (
-                  <p className="text-xs text-stone-400 leading-relaxed mt-3">{s.note}</p>
-                )}
+                {/* テキスト領域 — flex-1 で残りスペースを埋める */}
+                <div className="flex-1">
+                  <h2 className="text-base font-medium text-stone-900 mb-2">{s.title}</h2>
+                  <p className="text-sm text-stone-500 mb-3 leading-relaxed">{s.catch}</p>
+                  <p className="text-xs text-stone-400 leading-relaxed">{s.desc}</p>
+                  {s.note && (
+                    <p className="text-xs text-stone-400 leading-relaxed mt-3">{s.note}</p>
+                  )}
+                </div>
+                {/* ボタン — カード底部に固定 */}
                 <div className="flex flex-wrap gap-2 mt-4">
                   {s.cta && (
                     s.cta.href ? (
