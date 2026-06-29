@@ -8,6 +8,12 @@ export const metadata: Metadata = {
 
 const POSTS = [
   {
+    slug: '2026-06-29',
+    title: '誰よりも濃い半年。',
+    date: '2026-06-29',
+    author: { name: '原田祐紀', photo: '' },
+  },
+  {
     slug: '2026-06-19',
     title: '誰より多く、読んでいる',
     date: '2026-06-19',
@@ -58,14 +64,16 @@ export default function BlogPage() {
                 href={`/blog/${post.slug}`}
                 className="flex items-center gap-6 py-6 border-b border-stone-100 hover:opacity-60 transition-opacity"
               >
-                <div className="relative w-10 h-10 overflow-hidden flex-shrink-0">
-                  <Image
-                    src={post.author.photo}
-                    alt={post.author.name}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
+                {post.author.photo && (
+                  <div className="relative w-10 h-10 overflow-hidden flex-shrink-0">
+                    <Image
+                      src={post.author.photo}
+                      alt={post.author.name}
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                )}
                 <div className="min-w-0">
                   <p className="text-sm text-stone-700 mb-1">{post.title}</p>
                   <p className="text-xs text-stone-400">{post.date} · {post.author.name}</p>
