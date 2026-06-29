@@ -11,7 +11,7 @@ const POSTS = [
     slug: '2026-06-29',
     title: '誰よりも濃い半年。',
     date: '2026-06-29',
-    author: { name: '原田祐紀', photo: '' },
+    author: { name: '原田祐紀', photo: '/members/yuuki.png' },
   },
   {
     slug: '2026-06-19',

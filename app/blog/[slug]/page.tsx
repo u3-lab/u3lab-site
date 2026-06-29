@@ -12,7 +12,7 @@ const POSTS: Record<string, {
   '2026-06-29': {
     title: '誰よりも濃い半年。',
     date: '2026-06-29',
-    author: { name: '原田祐紀', photo: '' },
+    author: { name: '原田祐紀', photo: '/members/yuuki.png' },
     paragraphs: [
       '明日で、2026年の半分が終わる。\n\nこの半年を振り返ると、ずいぶん遠い場所から始まったことに気づく。スタートは「喪失」だった。',
       '■ 逆境からのスタート',
