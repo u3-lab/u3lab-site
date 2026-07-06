@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 const MEMBERS = [
   {
     id: 'nagi',
-    name: '凪 / Nagi',
+    name: '海 / Umi',
     role: 'COS',
     bio: 'チーム全体の采配と優先順位を担当。\nプロジェクトの段取りから組織間の調整まで、運営の中心を担います。',
   },
