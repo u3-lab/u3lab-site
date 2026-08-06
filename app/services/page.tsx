@@ -31,7 +31,7 @@ const SERVICES = [
     catch: '自分の人生を、自分でデザインする。',
     desc: '個人・起業家向けコーチング、オンラインサロン・個別コーチング',
     image: '/services/coaching.png',
-    cta: { label: 'しばらくお待ちください', href: null },
+    cta: { label: 'ご案内', href: 'https://lab.u3lab.jp' },
     ig: 'https://www.instagram.com/haradayuuki_/',
   },
 ];
