@@ -73,7 +73,7 @@ export default function MembersPage() {
     <div>
       {/* ヘッダービジュアル（カラーグループ写真） */}
       <div className="mt-16 w-full">
-        <div className="relative aspect-video w-full">
+        <div className="relative aspect-[2/1] w-full">
           <Image
             src="/members-hero.png"
             alt="U3LABチーム集合写真"
