@@ -43,7 +43,7 @@ export default function Home() {
             priority
           />
           <div className="absolute inset-0 bg-gradient-to-r from-black/65 via-black/30 to-transparent" />
-          <div className="absolute bottom-0 left-0 w-full pb-[5%] px-12 md:px-16">
+          <div className="absolute top-0 left-0 w-full pt-[5%] px-12 md:px-16">
             <div className="max-w-lg">
               <h1 className="text-4xl md:text-5xl font-medium tracking-tight text-white leading-tight">
                 自分の人生を、<br />自分でデザインする。
