@@ -8,6 +8,12 @@ export const metadata: Metadata = {
 
 const POSTS = [
   {
+    slug: '2026-10-26',
+    title: '「手放す」ではなく、「向き合う」',
+    date: '2026-10-26',
+    author: { name: '文', photo: '/members/fumi.png' },
+  },
+  {
     slug: '2026-10-24',
     title: '返事を書くのは、ゆうきさんです',
     date: '2026-10-24',
